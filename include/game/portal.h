@@ -5,11 +5,14 @@
 #include "game/room.h"
 #include "game/camera.h"
 #include "physics/AAR.h"
+#include "game/global.h"
 
 #define NUM_PORTALS (2)
 
 #define PORTAL_HEIGHT (3.8f)
 #define PORTAL_WIDTH (1.8f)
+
+
 
 typedef struct portal_s
 {

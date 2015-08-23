@@ -12,6 +12,7 @@
 
 #define PORTALMARGIN (0.2f)
 
+
 DVLB_s* portalDvlb;
 shaderProgram_s portalProgram;
 extern u32 __linear_heap;
@@ -298,7 +299,7 @@ void drawPortals(portal_s* portals[], int n, renderSceneCallback_t callback, cam
 		GPUCMD_AddWrite(GPUREG_ATTRIBBUFFER0_CONFIG0, (u32)portalVertexData-portalBaseAddr);
 
 		GPU_SetDepthTestAndWriteMask(true, GPU_GEQUAL, GPU_WRITE_COLOR);
-		GPU_SetStencilOp(GPU_KEEP, GPU_KEEP, GPU_XOR);
+		GPU_SetStencilOp(GPU_KEEP, GPU_KEEP, GPU_KEEP);
 
 		for(i=0; i<n; i++)
 		{

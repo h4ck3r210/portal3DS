@@ -10,7 +10,8 @@
 #include "game/camera.h"
 
 #include "logo_vsh_shbin.h"
-
+GPU_STENCILOP GPU_KEEP;
+GPU_STENCILOP GPU_XOR;
 camera_s menuCamera;
 char* startString;
 char* menuString;

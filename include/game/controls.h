@@ -3,6 +3,7 @@
 
 #include "game/player.h"
 
+
 void initControls();
 void exitControls();
 void updateControls(player_s* p);

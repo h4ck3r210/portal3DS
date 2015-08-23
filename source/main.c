@@ -1,16 +1,18 @@
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <malloc.h>
 #include <math.h>
 #include <3ds.h>
-
 #include "gfx/gs.h"
 #include "gfx/text.h"
 #include "gfx/md2.h"
 #include "gfx/texture.h"
 #include "utils/math.h"
 #include "utils/filesystem.h"
+
+#include "game/global.h"
 
 #include "game/sfx.h"
 #include "game/controls.h"
@@ -32,6 +34,10 @@
 #include "physics/physics.h"
 
 #define RGB10(r, g, b) ((((r)&0x3FF)<<20)|(((g)&0x3FF)<<10)|(((b)&0x3FF)))
+
+
+
+
 
 float debugVal[10];
 
@@ -399,12 +405,12 @@ int main(int argc, char** argv)
 
 	fadeOutTop();
 
-	bool again = true;
+
 	while(again)
 	{
 		gameInit();
 
-		bool done = false;
+	
 		while(aptMainLoop() && !done)
 		{
 			done = gameFrame();
